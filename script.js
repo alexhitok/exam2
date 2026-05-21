@@ -55,6 +55,10 @@ function calculate() {
     leadRespTxt.textContent = leadResp.toFixed(2) + '%';
     prosRespTxt.textContent = prosResp.toFixed(2) + '%';
 
+    // Update Slider track backgrounds
+    leadRespInput.style.setProperty('--val', leadRespInput.value + '%');
+    prosRespInput.style.setProperty('--val', prosRespInput.value + '%');
+
     renderChart(prospects, leads, customers);
 }
 
