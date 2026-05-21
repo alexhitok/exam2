@@ -103,6 +103,10 @@ body {
     border-color: #5a668a;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 .input-with-prefix {
     position: relative;
     display: flex;
@@ -297,11 +301,13 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .stat-card:nth-child(2) { background-color: var(--bar-leads); }
-.stat-card:nth-child(3) { background-color: var(--bar-customers); color: var(--bg-main) }
+.stat-card:nth-child(3) { background-color: var(--bar-customers); }
 
-.stat-card:nth-child(3) .stat-title, 
-.stat-card:nth-child(3) .stat-pct,
-.stat-card:nth-child(3) .stat-value {
+.stat-title {
+    color: #111;
+}
+
+.stat-card:nth-child(3) .stat-pct {
     color: var(--bg-main);
     font-weight: 600;
 }
@@ -317,6 +323,7 @@ input[type=range]::-webkit-slider-thumb {
 .stat-value {
     font-size: 32px;
     font-weight: 700;
+    color: #fff;
 }
 
 .progress-bar-bg {
@@ -336,7 +343,7 @@ input[type=range]::-webkit-slider-thumb {
     background-color: rgba(0, 0, 0, 0.15);
 }
 .stat-card:nth-child(3) .progress-bar-fill {
-    background-color: var(--bg-main);
+    background-color: #fff;
 }
 
 .tooltip {
